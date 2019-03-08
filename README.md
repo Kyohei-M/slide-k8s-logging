@@ -1,3 +1,3 @@
-# slide-k8s-logging
-Slide for the Kubernetes Logging, which is created by remark.js  
-[Slideshow](https://kyohei-m.github.io/slide-k8s-logging/)
+# slides-k8s-logging
+Slides for the Kubernetes Logging, which are created using remark.js  
+[Slideshow](https://kyohei-m.github.io/slides-k8s-logging/)

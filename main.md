@@ -27,6 +27,17 @@ layout: false
 - 安定保存のため、ログを集約して外部に転送
 
 ---
+### Logging
+
+.zoom1[
+```console
+$ kubectl logs kube-dns-[num] -c kubedns -n kube-system
+```
+]
+
+<center><img src=kubectl-logs.png width=100%></center>
+
+---
 ### Landscape
 
 <center><img src=landscape.png width=100%></center>
@@ -34,46 +45,11 @@ layout: false
 ---
 ### Tools
 
-- Datadog
-
 - Fluentd
 
+- Datadog
+
 etc...
-
----
-class: center, middle, inverse
-# Datadog
-
----
-### Datadog
-
-.right-small[
-<center><img src="https://datadog-prod.imgix.net/img/presskit/DDlogo.jpg" width=100%></center>
-]
-
-.left-large[
-- SaaS型の監視＆解析ツール
-
-- 課金制
-
-- 様々なサービスのメトリクスをシームレスに集約
-]
-
----
-### Log Explorer
-
-<center><img src="https://datadog-docs.imgix.net/images/logs/log_explorer_view-978012a0.png" width=100%></center>
-
----
-### 
-
-- 
-
-- 
-
-- 
-
-- 
 
 ---
 class: center, middle, inverse
@@ -141,32 +117,81 @@ etc...
 <center><img src="fluentd-daemonset.png" width=90%></center>
 
 ---
-### Get Started
-
-GKEでは作成済み
-
----
-### Stackdriver Logging
-
-.zoom1[
-OSSのデータ可視化ツール
-]
-
-<center><img src="grafana.png" width=80%></center>
+class: center, middle, inverse
+## Get Started with GKE
 
 ---
-### Stackdriver Logging
+### Get Started with GKE
 
-helmでインストール
+GKEではリソース作成済み
 
 ```console
-$ helm install stable/grafana
+$ kubectl get po -n kube-system | grep fluentd
+// 結果は一部省略
+fluentd-gcp-scaler-8b674f786-jc4wk  1/1  Running
+fluentd-gcp-v3.2.0-4hqm6            2/2  Running
+fluentd-gcp-v3.2.0-m5p49            2/2  Running
+fluentd-gcp-v3.2.0-x6rlq            2/2  Running
 
 ```
 
 ---
+### Stackdriver
+
+Real-time Log Management and Analysis
+
+- Seamlessly Resolve Issues
+
+- Scalable and Fully Managed
+
+- All Your Cloud Logs In One Place
+
+- Real Time Insights
+
+---
+### Stackdriver Monitoring
+
+<center><img src="stackdriver.png" width=100%></center>
+
+---
+### Stackdriver Logs Viewer
+
+<center><img src="stackdriver-logs-viewer.png" width=100%></center>
+
+---
 class: center, middle, inverse
 # Demo
+
+---
+### Datadog
+
+.right-small[
+<center><img src="https://datadog-prod.imgix.net/img/presskit/DDlogo.jpg" width=100%></center>
+]
+
+.left-large[
+- SaaS型の監視＆解析ツール
+
+- 課金制
+
+- 様々なサービスのメトリクスをシームレスに集約
+]
+
+---
+### Log Explorer
+
+<center><img src="https://datadog-docs.imgix.net/images/logs/log_explorer_view-978012a0.png" width=100%></center>
+
+---
+### 
+
+- 
+
+- 
+
+- 
+
+- 
 
 ---
 ### Fluent Bit
