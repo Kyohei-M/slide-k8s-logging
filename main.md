@@ -18,6 +18,13 @@ layout: false
 - Logging未経験者
 
 ---
+class: center, middle, inverse
+# Logging
+
+---
+<center><img src=twelve-factor-app-logs.png width=100%></center>
+
+---
 ### Logging
 
 - 標準出力と標準エラー出力にログを出力
@@ -183,15 +190,17 @@ class: center, middle, inverse
 <center><img src="https://datadog-docs.imgix.net/images/logs/log_explorer_view-978012a0.png" width=100%></center>
 
 ---
-### 
+### Log Management
 
-- 
+- Datadog Agent がログを収集
 
-- 
+    - DaemonSet for Kubernetes
 
-- 
+    - 暗号化通信を使用してデータを送信
 
-- 
+- ログのFiltering、Monitoring、Alert機能
+
+- Custom Logs
 
 ---
 ### Fluent Bit
@@ -208,12 +217,14 @@ class: center, middle, inverse
 <center><img src="https://images-na.ssl-images-amazon.com/images/I/91VNghpL1EL.jpg" width=45%></center>
 
 ---
-### Website
+### Links
 
-[Datadog - 公式](https://www.datadoghq.com/)
+[The Twelve-Factor App](https://12factor.net/)
 
-[Fluentd - 公式](https://www.fluentd.org/)
+[Fluentd](https://www.fluentd.org/)
 
-[Fluentd - GitHub](https://github.com/fluent)
+[Fluent Bit](https://fluentbit.io/)
 
-[Stackdriver Logging - 公式](https://cloud.google.com/logging/)
+[Stackdriver Logging](https://cloud.google.com/logging/)
+
+[Datadog](https://www.datadoghq.com/)
