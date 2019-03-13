@@ -228,3 +228,8 @@ class: center, middle, inverse
 [Stackdriver Logging](https://cloud.google.com/logging/)
 
 [Datadog](https://www.datadoghq.com/)
+
+---
+### Others
+
+fluentd-gcp-scaler のコードについて調べたので、[Qiita記事](https://qiita.com/kyohmizu/items/cbf9cca76a826d8eb130) を投稿しました。
