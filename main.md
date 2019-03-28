@@ -3,26 +3,56 @@ layout: true
 class: center, middle, inverse
 
 ---
-## Kubernetes入門
-
-Logging
+# Kubernetes Logging
+# Introduction
 
 ---
 layout: false
-### Assumptions
+## whoami
+
+.left-small[
+    ![image](https://pbs.twimg.com/profile_images/994762110792953856/EheEvqBY_400x400.jpg)
+]
+
+.right-large[
+- Kyohei Mizumoto(@kyohmizu)
+
+- C# Software Engineer
+
+- Interests
+    - Docker/Kubernetes
+    - Go
+    - Security
+]
+
+---
+### Required
 
 - Kubernetesの概要程度の知識
 
 ### Targets
 
-- Logging未経験者
+- Kubernetes Logging未経験者
+
+---
+### Contents
+
+1. Logging Overview
+
+1. Fluentd
+
+1. Get Started with GKE
+
+1. Demo
+
+1. Other Services
 
 ---
 class: center, middle, inverse
-# Logging
+# Logging Overview
 
 ---
-<center><img src=twelve-factor-app-logs.png width=100%></center>
+<center><img src=twelve-factor-app-logs.png width=85%></center>
 
 ---
 ### Logging
@@ -34,9 +64,9 @@ class: center, middle, inverse
 - 安定保存のため、ログを集約して外部に転送
 
 ---
-### Logging
+### kubectl logs
 
-.zoom1[
+.zoom2[
 ```console
 $ kubectl logs kube-dns-[num] -c kubedns -n kube-system
 ```
@@ -45,24 +75,17 @@ $ kubectl logs kube-dns-[num] -c kubedns -n kube-system
 <center><img src=kubectl-logs.png width=100%></center>
 
 ---
+class: header-margin
 ### Landscape
 
 <center><img src=landscape.png width=100%></center>
-
----
-### Tools
-
-- Fluentd
-
-- Datadog
-
-etc...
 
 ---
 class: center, middle, inverse
 # Fluentd
 
 ---
+class: header-margin
 ### Fluentd
 
 .right-small[
@@ -78,11 +101,13 @@ class: center, middle, inverse
 ]
 
 ---
+class: header-margin
 ### Before Fluentd
 
 <center><img src="https://www.fluentd.org/images/fluentd-before.png" width=80%></center>
 
 ---
+class: header-margin
 ### After Fluentd
 
 <center><img src="https://docs.fluentd.org/images/fluentd-architecture.png" width=85%></center>
@@ -121,7 +146,7 @@ etc...
 
 [公式イメージ](https://github.com/fluent/fluentd-kubernetes-daemonset/tree/master/docker-image/v1.3)
 
-<center><img src="fluentd-daemonset.png" width=90%></center>
+<center><img src="fluentd-daemonset.png" width=85%></center>
 
 ---
 class: center, middle, inverse
@@ -156,20 +181,27 @@ Real-time Log Management and Analysis
 - Real Time Insights
 
 ---
+class: header-margin
 ### Stackdriver Monitoring
 
 <center><img src="stackdriver.png" width=100%></center>
 
 ---
+class: header-margin
 ### Stackdriver Logs Viewer
 
 <center><img src="stackdriver-logs-viewer.png" width=100%></center>
 
 ---
-class: center, middle, inverse
+class: center, middle, blue
 # Demo
 
 ---
+class: center, middle, inverse
+# Other Services
+
+---
+class: header-margin
 ### Datadog
 
 .right-small[
@@ -185,6 +217,7 @@ class: center, middle, inverse
 ]
 
 ---
+class: header-margin
 ### Log Explorer
 
 <center><img src="https://datadog-docs.imgix.net/images/logs/log_explorer_view-978012a0.png" width=100%></center>
@@ -203,6 +236,7 @@ class: center, middle, inverse
 - Custom Logs
 
 ---
+class: header-margin
 ### Fluent Bit
 
 <center><img src="https://fluentbit.io/assets/img/logo1-default.png" width=90%></center>
@@ -219,17 +253,33 @@ class: center, middle, inverse
 ---
 ### Links
 
-[The Twelve-Factor App](https://12factor.net/)
+.zoom1[
+The Twelve-Factor App  
+[https://12factor.net/](https://12factor.net/)
 
-[Fluentd](https://www.fluentd.org/)
+Fluentd  
+[https://www.fluentd.org/](https://www.fluentd.org/)
 
-[Fluent Bit](https://fluentbit.io/)
+Fluent Bit  
+[https://fluentbit.io/](https://fluentbit.io/)
 
-[Stackdriver Logging](https://cloud.google.com/logging/)
+Stackdriver Logging  
+[https://cloud.google.com/logging/](https://cloud.google.com/logging/)
 
-[Datadog](https://www.datadoghq.com/)
+Datadog  
+[https://www.datadoghq.com/](https://www.datadoghq.com/)
+]
 
 ---
 ### Others
 
-fluentd-gcp-scaler のコードについて調べたので、[Qiita記事](https://qiita.com/kyohmizu/items/cbf9cca76a826d8eb130) を投稿しました。
+fluentd-gcp-scaler のコードについて調べたので、  
+Qiita記事を投稿しました。
+
+.zoom2[
+<https://qiita.com/kyohmizu/items/cbf9cca76a826d8eb130>
+]
+
+---
+class: center, middle, blue
+# Thank you!
